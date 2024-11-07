@@ -1,6 +1,7 @@
 package org.example;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -17,6 +18,13 @@ public class Main {
         patientenListe.add(new Patient("002", 234567, "Peter", "Schmidt", LocalDate.of(1985, 8, 12)));
         patientenListe.add(new Patient("003", 345678, "Laura", "Becker", LocalDate.of(1978, 12, 1)));
 
+        Collections.sort(patientenListe);
+
+
+
+        for (Patient patient : patientenListe) {
+            System.out.println(patient);
+        }
 
 
     }

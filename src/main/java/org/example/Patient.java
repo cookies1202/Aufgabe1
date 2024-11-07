@@ -1,7 +1,7 @@
 package org.example;
 import java.time.LocalDate;
 
-public class Patient {
+public class Patient implements Comparable<Patient> {
 
     private String  fallnummer;
     private int svNumber;
@@ -67,6 +67,12 @@ public class Patient {
                 ", gebDat=" + gebDat +
                 '}';
     }
+    @Override
+    public int compareTo(Patient other) {
+        return this.Nachname.compareTo(other.Nachname);
+    }
+
 
 }
+
 
