@@ -17,15 +17,17 @@ public class Main {
         patientenListe.add(new Patient("001", 123456, "Anna", "Müller", LocalDate.of(1990, 5, 21)));
         patientenListe.add(new Patient("002", 234567, "Peter", "Schmidt", LocalDate.of(1985, 8, 12)));
         patientenListe.add(new Patient("003", 345678, "Laura", "Becker", LocalDate.of(1978, 12, 1)));
+        patientenListe.add(new Patient("004",1234567,"Peter","Andi", LocalDate.of(1985, 8, 12)));
+        patientenListe.add(new Patient("005",123456,"Andi","Andi", LocalDate.of(1985, 8, 12)));
+        patientenListe.add(new Patient("006",123456,"Andi","Andi", LocalDate.of(1984, 8, 12)));
 
-        Collections.sort(patientenListe);
+        Collections.sort(patientenListe, new NameComparator() );
 
 
 
         for (Patient patient : patientenListe) {
             System.out.println(patient);
-            System.out.println("!!" +
-                    "");
+
         }
 
 
